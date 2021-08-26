@@ -11,9 +11,9 @@ axios.get(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/`).then(r
 
 
 
-export default function (props) {
+export default function Estado(props) {
   const [busca, setBusca] = useState('');
-  var control = false;
+
 
 
 
@@ -27,7 +27,7 @@ export default function (props) {
     <S.Header>
       <S.HeaderInput>
         
-        <img src={Img}/>         <input placeholder=" Pesquisar Estado" id="inpu" type="text" onChange={(ev) => setBusca(ev.target.value)}></input>
+        <img src={Img} alt="logo Localiza Ai Site"/>         <input placeholder=" Pesquisar Estado" id="inpu" type="text" onChange={(ev) => setBusca(ev.target.value)}></input>
      
       </S.HeaderInput>
       <S.HeaderNav>

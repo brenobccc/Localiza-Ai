@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import axios from "axios";
 import * as S from './styled';
 
@@ -16,9 +16,9 @@ axios.get(`https://servicodados.ibge.gov.br/api/v1/localidades/distritos`).then(
   //console.log(distritos)
 });
 
-export default function (props) {
+export default function Distrito(props) {
   const [busca, setBusca] = useState('');
-  var control = false;
+
 
 
 
@@ -31,7 +31,7 @@ export default function (props) {
   return <S.Container>
     <S.Header>
       <S.HeaderInput>
-      <img src={Img}/>       
+      <img src={Img} alt="logo Localiza Ai Site"/>       
         <input placeholder=" Pesquisar Distrito" id="inpu" type="text" onChange={(ev) => setBusca(ev.target.value)}></input>
       </S.HeaderInput>
       <S.HeaderNav>

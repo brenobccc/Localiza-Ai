@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import axios from "axios";
 import * as S from './styled';
 import Img from './logo.png';
@@ -15,7 +15,7 @@ axios.get(`https://servicodados.ibge.gov.br/api/v1/localidades/municipios/`).the
   //console.log(municipios)
 });
 
-export default function (props) {
+export default function Municipio(props) {
   const [busca, setBusca] = useState('');
 
 
@@ -30,7 +30,7 @@ export default function (props) {
   return <S.Container>
     <S.Header>
       <S.HeaderInput>
-      <img src={Img}/>       
+      <img src={Img} alt="logo Localiza Ai Site"/>       
       <input placeholder=" Pesquisar Município" type="text" onChange={(ev) => setBusca(ev.target.value)}></input>
       </S.HeaderInput>
       <S.HeaderNav>
